@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* === Modo Claro === */
+    --background: 0 0% 100%;                 /* Blanco puro */
+    --foreground: 217 33% 18%;              /* Gris oscuro */
+
+    --primary: 220 100% 78%;                /* Azul cielo claro */
+    --primary-foreground: 332 81% 61%;      /* Rosado */
+
+    --secondary: 204 100% 97%;              /* Azul pastel muy claro */
+    --secondary-foreground: 320 81% 62%;    /* Rosa chicle o rosa fuerte */
+
+    --accent: 22 92% 54%;                  /* Coral suave / salmón claro */
+    --accent-foreground: 12 100% 35%;       /* Coral oscuro / rojo anaranjado */
+
+    --destructive: 0 79% 70%;               /* Rojo suave */
+    --destructive-foreground: 0 0% 100%;    /* Blanco puro */
+
+    --muted: 220 20% 90%;                   /* Gris azulado muy claro */
+    --border: 220 15% 85%;                  /* Gris azulado claro */
+    --input: 220 15% 85%;                   /* Gris azulado claro */
+
+    /* Gráficos */
+    --chart-1: 220 100% 78%;                /* Azul cielo claro */
+    --chart-2: 138 60% 75%;                 /* Verde menta */
+    --chart-3: 12 100% 83%;                 /* Coral claro */
+    --chart-4: 42 87% 75%;                  /* Amarillo mostaza claro */
+    --chart-5: 316 60% 85%;                 /* Lila claro */
+
+    /* Sidebar */
+    --sidebar-background: 220 100% 98%;             /* Azul muy muy claro (casi blanco) */
+    --sidebar-foreground: 225 32% 17%;              /* Azul petróleo oscuro */
+    --sidebar-primary: 220 100% 78%;                /* Azul cielo claro */
+    --sidebar-primary-foreground: 225 32% 17%;      /* Azul petróleo oscuro */
+    --sidebar-accent: 138 60% 90%;                  /* Verde menta muy claro */
+    --sidebar-accent-foreground: 142 56% 29%;       /* Verde bosque oscuro */
+  }
+
+  /* === Modo Oscuro === */
+  .dark {
+    --background: 222 47% 11%;              /* Azul grisáceo muy oscuro */
+    --foreground: 210 20% 90%;              /* Gris azulado claro */
+
+    --primary: 222 63% 34%;                 /* Azul intenso */
+    --primary-foreground: 210 40% 98%;      /* Gris azulado muy claro */
+
+    --secondary: 152 62% 21%;               /* Verde oscuro */
+    --secondary-foreground: 142 56% 75%;    /* Verde claro pastel */
+
+    --accent: 16 79% 34%;                   /* Naranja rojizo oscuro */
+    --accent-foreground: 12 100% 83%;       /* Coral claro */
+
+    --destructive: 0 73% 42%;               /* Rojo intenso */
+
+    --muted: 222 20% 20%;                   /* Gris azulado oscuro */
+    --border: 222 15% 25%;                  /* Gris azulado medio oscuro */
+    --input: 222 15% 25%;                   /* Gris azulado medio oscuro */
+
+    /* Sidebar oscuro */
+    --sidebar-background: 222 47% 15%;              /* Azul grisáceo oscuro */
+    --sidebar-foreground: 210 20% 90%;              /* Gris azulado claro */
+    --sidebar-primary: 222 63% 34%;                 /* Azul intenso */
+    --sidebar-primary-foreground: 210 40% 98%;      /* Gris azulado muy claro */
+  }
+
+  /* === Estilos base === */
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: Arial, Helvetica, sans-serif; /* Mover aquí la fuente */
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

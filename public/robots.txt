@@ -1,0 +1,11 @@
+# Bloquear todos los robots de búsqueda
+User-agent: *
+Disallow: /
+
+# Bloquear específicamente a Googlebot
+User-agent: Googlebot
+Disallow: /
+
+# Bloquear específicamente a Bingbot
+User-agent: Bingbot
+Disallow: /

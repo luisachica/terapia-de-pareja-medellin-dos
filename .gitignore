@@ -1,0 +1,12 @@
+# Dependencias
+/node_modules
+/.next
+/out
+
+# Archivos ocultos del sistema
+.DS_Store
+.env*
+*.log
+
+# Build outputs
+/dist
