@@ -1,18 +1,68 @@
 {
   "redirects": [
     {
-      "source": "/consultas",
+      "source": "/impact",
       "destination": "/consultas-de-pareja",
       "permanent": true
     },
     {
-      "source": "/asesorias",
+      "source": "/copia-de-consultas-2",
+      "destination": "/consultas-de-pareja",
+      "permanent": true
+    },
+    {
+      "source": "/impact-3",
+      "destination": "/consultas-de-pareja",
+      "permanent": true
+    },
+    {
+      "source": "/impact-4",
+      "destination": "/consultas-de-pareja",
+      "permanent": true
+    },
+    {
+      "source": "/impact-5",
+      "destination": "/consultas-de-pareja",
+      "permanent": true
+    },
+    {
+      "source": "/impact-6",
+      "destination": "/consultas-de-pareja",
+      "permanent": true
+    },
+    {
+      "source": "/impact-7",
+      "destination": "/consultas-de-pareja",
+      "permanent": true
+    },
+    {
+      "source": "/impact-8",
+      "destination": "/consultas-de-pareja",
+      "permanent": true
+    },
+    {
+      "source": "/brands",
       "destination": "/asesorias-de-pareja",
       "permanent": true
     },
     {
-      "source": "/talleres",
+      "source": "/pop-up",
       "destination": "/talleres-de-pareja",
+      "permanent": true
+    },
+    {
+      "source": "/impact-2",
+      "destination": "/talleres-de-pareja",
+      "permanent": true
+    },
+    {
+      "source": "/contact-2",
+      "destination": "/contacto",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/sobre-mi",
       "permanent": true
     },
     {
@@ -21,7 +71,7 @@
       "permanent": true
     },
     {
-      "source": "/contact",
+      "source": "/about-me-2",
       "destination": "/contacto",
       "permanent": true
     }
