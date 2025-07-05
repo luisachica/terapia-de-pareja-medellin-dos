@@ -1,0 +1,29 @@
+{
+  "redirects": [
+    {
+      "source": "/consultas",
+      "destination": "/consultas-de-pareja",
+      "permanent": true
+    },
+    {
+      "source": "/asesorias",
+      "destination": "/asesorias-de-pareja",
+      "permanent": true
+    },
+    {
+      "source": "/talleres",
+      "destination": "/talleres-de-pareja",
+      "permanent": true
+    },
+    {
+      "source": "/about-me",
+      "destination": "/sobre-mi",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contacto",
+      "permanent": true
+    }
+  ]
+}
