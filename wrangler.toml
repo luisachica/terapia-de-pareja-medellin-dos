@@ -1,0 +1,37 @@
+name = "terapia-de-pareja-medellin"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "terapia-de-pareja-medellin"
+route = "terapiadeparejamedellin.com/*"
+
+[env.preview]
+name = "terapia-de-pareja-medellin-preview"
+
+# Build configuration
+[build]
+command = "npm run build"
+destination = "out"
+
+# Environment variables
+[vars]
+NODE_ENV = "production"
+NEXT_PUBLIC_SITE_URL = "https://terapiadeparejamedellin.com"
+
+# Pages configuration
+[pages]
+compatibility_date = "2024-01-01"
+production_branch = "main"
+preview_branch = "*"
+build_caching = true
+
+# Functions configuration (if needed)
+[functions]
+node_compat = true
+
+# Custom domains
+[[pages.custom_domains]]
+domain = "terapiadeparejamedellin.com"
+
+[[pages.custom_domains]]
+domain = "www.terapiadeparejamedellin.com"
