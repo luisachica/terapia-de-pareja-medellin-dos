@@ -37,13 +37,13 @@ export default function WhatsappFloating() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
-      className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 transition-transform duration-300 hover:scale-110"
+      className="fixed bottom-6 right-4 sm:bottom-8 sm:right-6 z-40 transition-transform duration-300 hover:scale-110 active:scale-95"
     >
       {/* Ícono SVG para mejor calidad y rendimiento */}
       <img
         src="/images/whatsapp.png"
         alt="WhatsApp"
-        className="h-14 w-14 sm:h-16 sm:w-16"
+        className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 drop-shadow-lg"
       />
     </a>
   );

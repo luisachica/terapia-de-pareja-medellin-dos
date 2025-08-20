@@ -27,12 +27,12 @@ export default function MobileMenu() {
 
       <SheetContent
         side="right"
-        className="w-[85vw] max-w-[400px] bg-background text-foreground"
+        className="w-[90vw] max-w-[350px] bg-background text-foreground p-6"
       >
-        <nav className="flex flex-col space-y-5 mt-8">
+        <nav className="flex flex-col space-y-6 mt-4">
           <Link
             href="/"
-            className="text-foreground hover:text-primary-foreground transition-colors font-medium"
+            className="text-foreground hover:text-primary-foreground transition-colors font-medium text-lg py-2 block"
             onClick={() => setOpen(false)}
           >
             Home
@@ -40,7 +40,7 @@ export default function MobileMenu() {
 
           <Link
             href="/sobre-mi"
-            className="text-foreground hover:text-primary-foreground transition-colors font-medium"
+            className="text-foreground hover:text-primary-foreground transition-colors font-medium text-lg py-2 block"
             onClick={() => setOpen(false)}
           >
             Sobre mí
@@ -50,25 +50,25 @@ export default function MobileMenu() {
           <div>
             <button
               onClick={() => setSubOpen(!subOpen)}
-              className="flex items-center justify-between w-full text-foreground font-medium hover:text-primary-foreground transition-colors"
+              className="flex items-center justify-between w-full text-foreground font-medium hover:text-primary-foreground transition-colors text-lg py-2"
             >
               Servicios
               <ChevronDown
-                className={`w-4 h-4 transition-transform ${
+                className={`w-5 h-5 transition-transform ${
                   subOpen ? "rotate-180" : ""
                 }`}
               />
             </button>
 
             {subOpen && (
-              <div className="ml-4 mt-4 flex flex-col gap-3 text-sm text-muted-foreground">
+              <div className="ml-4 mt-2 flex flex-col gap-4 text-base text-muted-foreground">
                 <Link
                   href="/consultas-de-pareja"
                   onClick={() => {
                     setOpen(false)
                     setSubOpen(false)
                   }}
-                  className="hover:text-primary-foreground"
+                  className="hover:text-primary-foreground py-2 block"
                 >
                   Consultas de pareja
                 </Link>
@@ -78,7 +78,7 @@ export default function MobileMenu() {
                     setOpen(false)
                     setSubOpen(false)
                   }}
-                  className="hover:text-primary-foreground"
+                  className="hover:text-primary-foreground py-2 block"
                 >
                   Asesorías de pareja
                 </Link>
@@ -88,7 +88,7 @@ export default function MobileMenu() {
                     setOpen(false)
                     setSubOpen(false)
                   }}
-                  className="hover:text-primary-foreground"
+                  className="hover:text-primary-foreground py-2 block"
                 >
                   Talleres de pareja
                 </Link>
@@ -98,15 +98,18 @@ export default function MobileMenu() {
 
           <Link
             href="/contacto"
-            className="text-foreground hover:text-primary-foreground transition-colors font-medium"
+            className="text-foreground hover:text-primary-foreground transition-colors font-medium text-lg py-2 block"
             onClick={() => setOpen(false)}
           >
             Contacto
           </Link>
 
+          {/* Separador visual */}
+          <div className="border-t border-border my-4"></div>
+
           <Button
             asChild
-            className="bg-gradient-to-r from-primary-foreground to-accent text-white hover:opacity-90 rounded-full px-6 py-4 text-base md:px-8 md:py-6 md:text-lg shadow-md hover:shadow-lg transition-all"
+            className="bg-gradient-to-r from-primary-foreground to-accent text-white hover:opacity-90 rounded-full px-8 py-4 text-lg shadow-md hover:shadow-lg transition-all w-full justify-center"
             onClick={() => setOpen(false)}
           >
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">

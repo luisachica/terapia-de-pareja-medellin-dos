@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
 import Footer from "../components/Footer"
+import WhatsappFloating from "@/components/WhatsappFloating"
 import { generateMetadata as generateSiteMetadata } from "@/lib/config"
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" })
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <WhatsappFloating />
       </body>
     </html>
   )

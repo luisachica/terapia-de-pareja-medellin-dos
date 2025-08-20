@@ -9,9 +9,9 @@ const whatsappLink = "https://wa.me/573137415861"
 
 export function Header() {
     return (
-        <header className="sticky top-0 z-50 w-full bg-background/90 backdrop-blur-md border-b border-border shadow-sm">
-            <div className="container mx-auto py-3 sm:py-6 px-4 sm:px-8">
-                <div className="flex items-center justify-between">
+        <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <div className="container mx-auto px-4 sm:px-6">
+                <div className="flex h-14 sm:h-16 items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center mr-4">
                         <div className="font-bold flex items-center text-foreground">
@@ -96,25 +96,26 @@ export function Header() {
                     </nav>
 
                     {/* Acciones */}
-                    <div className="flex items-center gap-x-3 md:gap-x-4">
-                        {/* WhatsApp icon */}
+                    <div className="flex items-center gap-x-2 sm:gap-x-3 md:gap-x-4">
+                        {/* WhatsApp icon - Solo visible en desktop */}
                         <a
                             href={whatsappLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-primary hover:text-primary-foreground transition-colors"
+                            className="hidden md:block text-primary hover:text-primary-foreground transition-colors"
                             aria-label="WhatsApp"
                         >
                             <MessageCircle className="w-6 h-6" />
                         </a>
 
-                        {/* CTA botón */}
+                        {/* CTA botón - Responsive */}
                         <Button
                             asChild
-                            className="bg-gradient-to-r from-primary-foreground to-accent text-white hover:opacity-90 rounded-full px-8 py-6 text-lg shadow-md hover:shadow-lg transition-all"
+                            className="hidden sm:flex bg-gradient-to-r from-primary-foreground to-accent text-white hover:opacity-90 rounded-full px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-6 text-sm sm:text-base md:text-lg shadow-md hover:shadow-lg transition-all"
                         >
                             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                                Agenda tu cita
+                                <span className="hidden sm:inline">Agenda tu cita</span>
+                                <span className="sm:hidden">Cita</span>
                             </a>
                         </Button>
 
