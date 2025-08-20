@@ -8,7 +8,7 @@ export default function HeroSection() {
     <section className="pt-16 pb-16 md:pt-24 md:pb-28 overflow-hidden bg-background text-foreground">
       <div className="container mx-auto px-4 sm:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 -mt-16">
+          <div className="space-y-8 -mt-16 text-center md:text-left">
             <div className="inline-block px-4 py-2 bg-secondary text-primary-foreground rounded-full font-medium text-sm mb-2">
               ¿Estás buscando fortalecer tu relación?
             </div>
@@ -50,7 +50,7 @@ export default function HeroSection() {
               </Button>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative flex justify-center md:justify-start">
             <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent opacity-30 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-secondary opacity-30 rounded-full blur-3xl"></div>
             <div className="relative bg-card rounded-3xl overflow-hidden shadow-xl">
