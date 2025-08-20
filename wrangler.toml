@@ -1,6 +1,9 @@
 # Cloudflare Pages configuration
 name = "terapia-de-pareja-medellin"
 compatibility_date = "2024-01-01"
+pages_build_output_dir = "build"
 
-# This file is mainly for Wrangler CLI
-# Cloudflare Pages build settings should be configured in the dashboard
+# Build configuration for Cloudflare Pages
+[build]
+command = "npm run build:cloudflare"
+publish = "build"
