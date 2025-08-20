@@ -3,8 +3,10 @@
 import type { JSX } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import WhatsappFloating from "@/components/WhatsappFloating";
 import StructuredData from "@/components/StructuredData";
+import { Users, BookOpen } from "lucide-react";
 
 // Datos Estructurados (JSON-LD) para esta página
 const serviceData = {
@@ -166,6 +168,61 @@ export default function ConsultasPageClient(): JSX.Element {
                         </div>
                     </div>
                 </div>
+
+                {/* Sección de servicios relacionados */}
+                <section className="py-16 bg-secondary">
+                    <div className="container mx-auto px-4 sm:px-8">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold text-foreground mb-4">
+                                Otros servicios que pueden interesarte
+                            </h2>
+                            <p className="text-muted-foreground max-w-2xl mx-auto">
+                                Explora nuestros otros servicios especializados en terapia de pareja
+                            </p>
+                        </div>
+                        
+                        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                            <div className="bg-background rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all group">
+                                <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-muted transition-colors">
+                                    <Users className="w-8 h-8 text-secondary-foreground" />
+                                </div>
+                                <h3 className="text-xl font-semibold text-foreground mb-4">Asesorías de pareja</h3>
+                                <p className="text-muted-foreground mb-6">
+                                    Sesiones personalizadas para mejorar la comunicación y resolver conflictos en tu relación.
+                                </p>
+                                <Button
+                                    asChild
+                                    variant="outline"
+                                    className="rounded-full border-secondary text-secondary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
+                                >
+                                    <Link href="/asesorias-de-pareja">
+                                        Conoce más
+                                    </Link>
+                                </Button>
+                            </div>
+
+                            <div className="bg-background rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all group">
+                                <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mb-6 group-hover:bg-muted transition-colors">
+                                    <BookOpen className="w-8 h-8 text-accent-foreground" />
+                                </div>
+                                <h3 className="text-xl font-semibold text-foreground mb-4">Talleres de pareja</h3>
+                                <p className="text-muted-foreground mb-6">
+                                    Espacios de aprendizaje grupal donde adquirirás herramientas prácticas para mejorar tus relaciones.
+                                </p>
+                                <Button
+                                    asChild
+                                    variant="outline"
+                                    className="rounded-full border-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground transition-all"
+                                >
+                                    <Link href="/talleres-de-pareja">
+                                        Conoce más
+                                    </Link>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <WhatsappFloating />
             </main>
         </>

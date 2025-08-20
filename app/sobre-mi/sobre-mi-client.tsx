@@ -2,9 +2,10 @@
 
 import type { JSX } from "react";
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CheckCircle2 } from "lucide-react"
+import { CheckCircle2, Users, Calendar, BookOpen } from "lucide-react"
 import { cn } from "@/lib/utils"
 import StructuredData from "@/components/StructuredData";
 import WhatsappFloating from "@/components/WhatsappFloating";
@@ -371,6 +372,80 @@ export default function SobreMiPageClient(): JSX.Element {
                         </div>
                     </div>
                 </div>
+
+                {/* Sección de servicios */}
+                <section className="py-16 bg-secondary">
+                    <div className="container mx-auto px-4 sm:px-8">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold text-foreground mb-4">
+                                Mis servicios especializados
+                            </h2>
+                            <p className="text-muted-foreground max-w-2xl mx-auto">
+                                Descubre cómo puedo ayudarte a fortalecer tu relación de pareja
+                            </p>
+                        </div>
+                        
+                        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                            <div className="bg-background rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all group">
+                                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-muted transition-colors">
+                                    <Users className="w-8 h-8 text-primary-foreground" />
+                                </div>
+                                <h3 className="text-xl font-semibold text-foreground mb-4">Consultas de pareja</h3>
+                                <p className="text-muted-foreground mb-6">
+                                    Un espacio seguro para parejas en crisis que buscan comprender y sanar su relación.
+                                </p>
+                                <Button
+                                    asChild
+                                    variant="outline"
+                                    className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                >
+                                    <Link href="/consultas-de-pareja">
+                                        Conoce más
+                                    </Link>
+                                </Button>
+                            </div>
+
+                            <div className="bg-background rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all group">
+                                <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mb-6 group-hover:bg-muted transition-colors">
+                                    <Calendar className="w-8 h-8 text-accent-foreground" />
+                                </div>
+                                <h3 className="text-xl font-semibold text-foreground mb-4">Asesorías de pareja</h3>
+                                <p className="text-muted-foreground mb-6">
+                                    Orientación profesional puntual para abordar temas específicos y tomar decisiones importantes.
+                                </p>
+                                <Button
+                                    asChild
+                                    variant="outline"
+                                    className="rounded-full border-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground transition-all"
+                                >
+                                    <Link href="/asesorias-de-pareja">
+                                        Conoce más
+                                    </Link>
+                                </Button>
+                            </div>
+
+                            <div className="bg-background rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all group">
+                                <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-muted transition-colors">
+                                    <BookOpen className="w-8 h-8 text-secondary-foreground" />
+                                </div>
+                                <h3 className="text-xl font-semibold text-foreground mb-4">Talleres de pareja</h3>
+                                <p className="text-muted-foreground mb-6">
+                                    Espacios vivenciales para fortalecer la conexión y mejorar la comunicación en pareja.
+                                </p>
+                                <Button
+                                    asChild
+                                    variant="outline"
+                                    className="rounded-full border-secondary text-secondary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
+                                >
+                                    <Link href="/talleres-de-pareja">
+                                        Conoce más
+                                    </Link>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <WhatsappFloating />
             </main >
         </>

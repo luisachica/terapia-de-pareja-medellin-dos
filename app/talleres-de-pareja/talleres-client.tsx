@@ -3,7 +3,8 @@
 import type { JSX } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { MessageSquare, HeartHandshake, Infinity, Flame, Leaf, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { MessageSquare, HeartHandshake, Infinity, Flame, Leaf, Sparkles, Calendar, Users } from "lucide-react";
 import WhatsappFloating from "@/components/WhatsappFloating";
 import StructuredData from "@/components/StructuredData";
 
@@ -186,6 +187,61 @@ export default function TalleresPageClient(): JSX.Element {
                         </div>
                     </div>
                 </div>
+
+                {/* Sección de servicios relacionados */}
+                <section className="py-16 bg-secondary">
+                    <div className="container mx-auto px-4 sm:px-8">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold text-foreground mb-4">
+                                Otros servicios que pueden interesarte
+                            </h2>
+                            <p className="text-muted-foreground max-w-2xl mx-auto">
+                                Explora nuestros otros servicios especializados en terapia de pareja
+                            </p>
+                        </div>
+                        
+                        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                            <div className="bg-background rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all group">
+                                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-muted transition-colors">
+                                    <Users className="w-8 h-8 text-primary-foreground" />
+                                </div>
+                                <h3 className="text-xl font-semibold text-foreground mb-4">Consultas de pareja</h3>
+                                <p className="text-muted-foreground mb-6">
+                                    Un espacio seguro para parejas en crisis que buscan comprender y sanar su relación.
+                                </p>
+                                <Button
+                                    asChild
+                                    variant="outline"
+                                    className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                                >
+                                    <Link href="/consultas-de-pareja">
+                                        Conoce más
+                                    </Link>
+                                </Button>
+                            </div>
+
+                            <div className="bg-background rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all group">
+                                <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mb-6 group-hover:bg-muted transition-colors">
+                                    <Calendar className="w-8 h-8 text-accent-foreground" />
+                                </div>
+                                <h3 className="text-xl font-semibold text-foreground mb-4">Asesorías de pareja</h3>
+                                <p className="text-muted-foreground mb-6">
+                                    Orientación profesional puntual para abordar temas específicos y tomar decisiones importantes.
+                                </p>
+                                <Button
+                                    asChild
+                                    variant="outline"
+                                    className="rounded-full border-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground transition-all"
+                                >
+                                    <Link href="/asesorias-de-pareja">
+                                        Conoce más
+                                    </Link>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <WhatsappFloating />
             </main>
         </>

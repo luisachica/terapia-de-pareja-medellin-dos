@@ -1,4 +1,28 @@
 User-agent: *
 Allow: /
 
+# Optimización para crawlers
+Crawl-delay: 1
+
+# Sitemap
 Sitemap: https://terapiadeparejamedellin.com/sitemap.xml
+
+# Páginas prioritarias para indexación rápida
+Allow: /consultas-de-pareja
+Allow: /asesorias-de-pareja
+Allow: /talleres-de-pareja
+Allow: /sobre-mi
+Allow: /contacto
+
+# Bloquear archivos innecesarios
+Disallow: /_next/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /images/
+
+# Permitir solo imágenes importantes para SEO
+Allow: /images/terapia-de-pareja-medellin-yolanda.jpg
+Allow: /images/pareja-feliz*.jpg
+Allow: /images/sobre-mi.jpg

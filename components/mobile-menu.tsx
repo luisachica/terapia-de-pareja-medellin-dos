@@ -27,9 +27,9 @@ export default function MobileMenu() {
 
       <SheetContent
         side="right"
-        className="w-[280px] sm:w-[320px] bg-background text-foreground"
+        className="w-[85vw] max-w-[400px] bg-background text-foreground"
       >
-        <nav className="flex flex-col gap-8 mt-12">
+        <nav className="flex flex-col space-y-5 mt-8">
           <Link
             href="/"
             className="text-foreground hover:text-primary-foreground transition-colors font-medium"
@@ -106,7 +106,7 @@ export default function MobileMenu() {
 
           <Button
             asChild
-            className="bg-gradient-to-r from-primary-foreground to-accent text-white hover:opacity-90 rounded-full px-8 py-6 text-lg shadow-md hover:shadow-lg transition-all"
+            className="bg-gradient-to-r from-primary-foreground to-accent text-white hover:opacity-90 rounded-full px-6 py-4 text-base md:px-8 md:py-6 md:text-lg shadow-md hover:shadow-lg transition-all"
             onClick={() => setOpen(false)}
           >
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">

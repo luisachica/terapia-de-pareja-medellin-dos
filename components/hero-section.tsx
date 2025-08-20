@@ -5,22 +5,22 @@ export default function HeroSection() {
   const whatsappLink = "https://wa.me/573137415861"
 
   return (
-    <section className="pt-24 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-background text-foreground">
-      <div className="container mx-auto px-8">
+    <section className="pt-16 pb-16 md:pt-24 md:pb-28 overflow-hidden bg-background text-foreground">
+      <div className="container mx-auto px-4 sm:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 -mt-16">
             <div className="inline-block px-4 py-2 bg-secondary text-primary-foreground rounded-full font-medium text-sm mb-2">
               ¿Estás buscando fortalecer tu relación?
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-tight">
               <span className="block">Yolanda</span>
               <span className="block bg-gradient-to-r from-primary-foreground to-accent text-transparent bg-clip-text">
                 Osorio
               </span>
             </h1>
 
-            <div className="flex items-center gap-6 pt-6 border-t border-border">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 pt-6 border-t border-border">
               <div className="w-36 h-36 relative flex-shrink-0">
                 <Image
                   src="/images/revolucion-en-pareja-logo.png"
@@ -42,7 +42,7 @@ export default function HeroSection() {
             <div className="pt-4">
               <Button
                 asChild
-                className="bg-gradient-to-r from-primary-foreground to-accent text-white hover:opacity-90 rounded-full px-8 py-6 text-lg shadow-md hover:shadow-lg transition-all"
+                className="bg-gradient-to-r from-primary-foreground to-accent text-white hover:opacity-90 rounded-full px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg shadow-md hover:shadow-lg transition-all w-full sm:w-auto"
               >
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                   Descubre cómo

@@ -15,7 +15,7 @@ export default function CtaSection() {
             <div className="py-8 px-6 sm:px-10 md:py-12 md:px-12 bg-primary text-foreground">
               <h2 className="text-2xl sm:text-3xl font-bold mb-6">¿Listo para fortalecer tu relación?</h2>
               <p className="mb-8 text-foreground/90">
-                Da el primer paso hacia una relación más saludable y satisfactoria. Agenda tu cita hoy mismo.
+                Da el primer paso hacia una relación más saludable y satisfactoria. Agenda tu <Link href="/contacto" className="underline hover:text-accent-foreground">cita</Link> hoy mismo o conoce nuestros <Link href="/#servicios" className="underline hover:text-accent-foreground">servicios</Link>.
               </p>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">

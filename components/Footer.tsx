@@ -9,8 +9,8 @@ const whatsappLink = "https://wa.me/573001112233"; // O pásalo como prop si cam
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-slate-50 to-sky-50 py-20">
-      <div className="container mx-auto px-8">
+    <footer className="bg-gradient-to-r from-slate-50 to-sky-50 py-12 sm:py-20">
+      <div className="container mx-auto px-4 sm:px-8">
         <div className="flex justify-center mb-8">
           <div className="text-center">
             <div className="flex justify-center mb-4">
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex justify-center space-x-12 mb-10">
+        <div className="flex flex-col sm:flex-row justify-center sm:space-x-12 space-y-4 sm:space-y-0 mb-10 items-center">
           <Link href="/" className="text-slate-700 hover:text-pink-500 transition-colors font-medium">
             Home
           </Link>

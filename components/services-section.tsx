@@ -6,9 +6,9 @@ export default function ServicesSection() {
 
   return (
     <section id="servicios" className="py-24 bg-secondary text-foreground">
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-4 sm:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
             <span className="bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
               Lo que te puedo brindar
             </span>
@@ -19,10 +19,10 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center gap-4 mb-16">
+        <div className="flex flex-col md:flex-row justify-center gap-4 mb-10 sm:mb-16">
           <Button
             asChild
-            className="bg-gradient-to-r from-primary-foreground to-accent text-white hover:opacity-90 rounded-full px-8 py-6 text-lg shadow-md hover:shadow-lg transition-all"
+            className="bg-gradient-to-r from-primary-foreground to-accent text-white hover:opacity-90 rounded-full px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg shadow-md hover:shadow-lg transition-all"
           >
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
               Agenda tu cita presencial
@@ -30,7 +30,7 @@ export default function ServicesSection() {
           </Button>
           <Button
             asChild
-            className="bg-card text-foreground hover:bg-muted border border-border rounded-full px-8 py-6 text-lg shadow-md hover:shadow-lg transition-all"
+            className="bg-card text-foreground hover:bg-muted border border-border rounded-full px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg shadow-md hover:shadow-lg transition-all"
           >
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
               Agenda tu cita virtual
@@ -52,7 +52,7 @@ export default function ServicesSection() {
               variant="outline"
               className="rounded-full border-secondary text-secondary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
             >
-              <a href="asesorias-de-pareja" target="_blank" rel="noopener noreferrer">
+              <a href="/asesorias-de-pareja">
                 Conoce más
               </a>
             </Button>
@@ -71,7 +71,7 @@ export default function ServicesSection() {
               variant="outline"
               className="rounded-full border-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground transition-all"
             >
-              <a href="talleres-de-pareja" target="_blank" rel="noopener noreferrer">
+              <a href="/talleres-de-pareja">
                 Conoce más
               </a>
             </Button>
@@ -90,7 +90,7 @@ export default function ServicesSection() {
               variant="outline"
               className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
             >
-              <a href="consultas-de-pareja" target="_blank" rel="noopener noreferrer">
+              <a href="/consultas-de-pareja">
                 ¡Conoce más!
               </a>
             </Button>

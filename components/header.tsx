@@ -9,14 +9,14 @@ const whatsappLink = "https://wa.me/573137415861"
 
 export function Header() {
     return (
-        <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border shadow-sm">
-            <div className="container mx-auto py-6 px-8">
+        <header className="sticky top-0 z-50 w-full bg-background/90 backdrop-blur-md border-b border-border shadow-sm">
+            <div className="container mx-auto py-3 sm:py-6 px-4 sm:px-8">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center mr-4">
                         <div className="font-bold flex items-center text-foreground">
-                            <span className="text-2xl md:text-3xl mr-2 bg-gradient-to-r from-primary-foreground to-accent text-transparent bg-clip-text">YO</span>
-                            <span className="text-sm md:text-lg leading-tight">
+                            <span className="text-xl sm:text-2xl md:text-3xl mr-1 sm:mr-2 bg-gradient-to-r from-primary-foreground to-accent text-transparent bg-clip-text">YO</span>
+                            <span className="text-xs sm:text-sm md:text-lg leading-tight">
                                 YOLANDA
                                 <br />
                                 OSORIO
