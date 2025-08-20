@@ -1,6 +1,45 @@
-import type { MetadataRoute } from "next"
-
+import { MetadataRoute } from 'next'
+import { siteConfig } from '@/lib/config'
+ 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Devolver un array vacío para no proporcionar información de sitemap
-  return []
+  const baseUrl = siteConfig.url
+  
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/consultas-de-pareja`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/asesorias-de-pareja`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/talleres-de-pareja`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/sobre-mi`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/contacto`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+  ]
 }

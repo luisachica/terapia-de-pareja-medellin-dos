@@ -17,7 +17,7 @@ const serviceData = {
   },
   "name": "Consultas de Pareja",
   "description": "Un espacio seguro y neutral para parejas en crisis que buscan comprender lo que está sucediendo en su relación, sanar heridas abiertas y recuperar el vínculo que los unió.",
-  "url": "https://www.terapiaparejamedellin.com/consultas-de-pareja"
+  "url": "https://terapiadeparejamedellin.com/consultas-de-pareja"
 };
 
 const faqData = {

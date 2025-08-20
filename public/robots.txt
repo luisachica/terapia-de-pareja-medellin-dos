@@ -1,11 +1,4 @@
-# Bloquear todos los robots de búsqueda
 User-agent: *
-Disallow: /
+Allow: /
 
-# Bloquear específicamente a Googlebot
-User-agent: Googlebot
-Disallow: /
-
-# Bloquear específicamente a Bingbot
-User-agent: Bingbot
-Disallow: /
+Sitemap: https://terapiadeparejamedellin.com/sitemap.xml

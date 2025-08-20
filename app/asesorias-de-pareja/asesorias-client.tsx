@@ -17,7 +17,7 @@ const serviceData = {
   },
   "name": "Asesorías de Pareja",
   "description": "Ofrecemos asesorías puntuales para parejas que necesitan claridad y guía profesional para abordar temas específicos, tomar decisiones o resolver conflictos.",
-  "url": "https://www.terapiaparejamedellin.com/asesorias-de-pareja"
+  "url": "https://terapiadeparejamedellin.com/asesorias-de-pareja"
 };
 
 const faqData = {
