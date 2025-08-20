@@ -12,17 +12,7 @@ const nextConfig = {
   // Cloudflare Pages configuration
   output: 'export',
   trailingSlash: false,
-  skipTrailingSlashRedirect: true,
-  distDir: 'out',
-  // Disable server-side features for static export
-  experimental: {
-    runtime: 'edge',
-  },
-  // Optimize for static generation
-  generateEtags: false,
-  poweredByHeader: false,
-  // Asset optimization
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://terapiadeparejamedellin.com' : '',
+  distDir: 'build',
 }
 
 export default nextConfig
