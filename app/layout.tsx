@@ -17,6 +17,10 @@ export const metadata: Metadata = generateSiteMetadata({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className="scroll-smooth">
+      <head>
+        {/* Google Search Console Verification Meta Tag */}
+        <meta name="google-site-verification" content="68ZW-npy0iSve7KgVoyJVPOE8QPILnfFjjFtagnsP2o" />
+      </head>
       <body className={`${outfit.className} bg-background text-foreground`}>
         <Header />
         <main>{children}</main>
