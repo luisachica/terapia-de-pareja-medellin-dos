@@ -8,14 +8,15 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { PhoneIcon, MapPinIcon, MessageCircle, Instagram, Mail, ArrowRight } from "lucide-react"
 import StructuredData from "@/components/StructuredData";
-import WhatsappFloating from "@/components/WhatsappFloating";
+
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 // Datos Estructurados para la página de Contacto
 const contactData = {
   "@context": "https://schema.org",
   "@type": "Psychologist",
   "name": "Yolanda Osorio - Terapia de Pareja Medellín",
-  "image": "https://www.terapiaparejamedellin.com/images/contacto-yolanda.png",
+  "image": "https://www.terapiaparejamedellin.com/images/contacto-yolanda.webp",
   "telephone": "+573137415861",
   "email": "yolioshe97@gmail.com",
   "address": {
@@ -78,6 +79,10 @@ export default function ContactoPageClient(): JSX.Element {
             <StructuredData data={contactData} />
 
             <main className="min-h-screen bg-background text-foreground">
+                {/* Breadcrumbs */}
+                <div className="container mx-auto px-4 pt-4">
+                    <BreadcrumbNavigation className="mb-4" />
+                </div>
                 {/* Hero */}
                 <div className="relative w-full bg-secondary">
                     <div className="container mx-auto px-8 py-20 flex flex-col md:flex-row items-center gap-12">
@@ -95,7 +100,7 @@ export default function ContactoPageClient(): JSX.Element {
                         <div className="w-full md:w-[40%]">
                             <div className="rounded-3xl overflow-hidden shadow-2xl border border-border aspect-[1/1] bg-muted">
                                 <Image
-                                    src="/images/contacto-yolanda.png"
+                                    src="/images/contacto-yolanda.webp"
                                     alt="Contacto Yolanda Osorio"
                                     width={600}
                                     height={750}
@@ -315,7 +320,7 @@ export default function ContactoPageClient(): JSX.Element {
                         </div>
                     </div>
                 </div>
-                <WhatsappFloating/>
+                
             </main>
         </>
     )

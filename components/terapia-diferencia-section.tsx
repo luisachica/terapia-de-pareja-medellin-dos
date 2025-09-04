@@ -35,7 +35,7 @@ export default function TerapiaDiferenciaSection() {
 
           <div className="rounded-3xl overflow-hidden shadow-2xl transform md:translate-x-10 p-4 bg-card">
             <Image
-              src="/images/pareja-feliz-con-su-relacion.jpg"
+              src="/images/pareja-feliz-con-su-relacion.webp"
               alt="Pareja feliz después de terapia"
               width={800}
               height={533}

@@ -46,6 +46,22 @@ export default function MobileMenu() {
             Sobre mí
           </Link>
 
+          <Link
+            href="/blog"
+            className="text-foreground hover:text-primary-foreground transition-colors font-medium text-lg py-2 block"
+            onClick={() => setOpen(false)}
+          >
+            Blog
+          </Link>
+
+          <Link
+            href="/preguntas-frecuentes"
+            className="text-foreground hover:text-primary-foreground transition-colors font-medium text-lg py-2 block"
+            onClick={() => setOpen(false)}
+          >
+            FAQ
+          </Link>
+
           {/* Submenú tipo acordeón */}
           <div>
             <button

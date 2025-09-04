@@ -5,7 +5,7 @@
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 
-const whatsappLink = "https://wa.me/573001112233"; // O pásalo como prop si cambia dinámicamente
+const whatsappLink = "https://wa.me/573137415861"; // O pásalo como prop si cambia dinámicamente
 
 export default function Footer() {
   return (
@@ -37,6 +37,12 @@ export default function Footer() {
           </Link>
           <Link href="/contacto" className="text-slate-700 hover:text-pink-500 transition-colors font-medium">
             Contacto
+          </Link>
+          <Link
+            href="/preguntas-frecuentes"
+            className="text-slate-700 hover:text-pink-500 transition-colors font-medium"
+          >
+            FAQ
           </Link>
         </div>
 

@@ -88,6 +88,12 @@ export function Header() {
                             Sobre mí
                         </Link>
                         <Link
+                            href="/blog"
+                            className="text-foreground hover:text-primary-foreground transition-colors font-medium"
+                        >
+                            Blog
+                        </Link>
+                        <Link
                             href="/contacto"
                             className="text-foreground hover:text-primary-foreground transition-colors font-medium"
                         >

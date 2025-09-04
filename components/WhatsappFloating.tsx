@@ -42,7 +42,7 @@ export default function WhatsappFloating() {
       {/* Ícono SVG para mejor calidad y rendimiento */}
       <img
         src="/images/whatsapp.png"
-        alt="WhatsApp"
+        alt="Contactar por WhatsApp para terapia de pareja en Medellín"
         className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 drop-shadow-lg"
       />
     </a>

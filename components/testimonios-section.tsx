@@ -35,13 +35,20 @@ const testimonios = [
 export default function TestimoniosSection() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [slidesToShow, setSlidesToShow] = useState(2)
+  const [isClient, setIsClient] = useState(false)
 
-  const getSlidesToShow = () => {
-    if (typeof window !== "undefined") {
-      return window.innerWidth < 640 ? 1 : 2
+  useEffect(() => {
+    setIsClient(true)
+    const updateSlidesToShow = () => {
+      setSlidesToShow(window.innerWidth < 640 ? 1 : 2)
     }
-    return 2
-  }
+    
+    updateSlidesToShow()
+    window.addEventListener('resize', updateSlidesToShow)
+    
+    return () => window.removeEventListener('resize', updateSlidesToShow)
+  }, [])
 
   const nextTestimonio = useCallback(() => {
     setActiveIndex((current) => (current >= testimonios.length - 1 ? 0 : current + 1))
@@ -84,8 +91,8 @@ export default function TestimoniosSection() {
 
         <div className="relative max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {testimonios.map((testimonio, index) => {
-              const slidesToShow = getSlidesToShow()
+            {isClient && testimonios.map((testimonio, index) => {
+      
               const isVisible = index >= activeIndex && index < activeIndex + slidesToShow
               if (!isVisible) return null
 

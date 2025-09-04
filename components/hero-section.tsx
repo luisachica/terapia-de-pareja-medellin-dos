@@ -55,7 +55,7 @@ export default function HeroSection() {
             <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-secondary opacity-30 rounded-full blur-3xl"></div>
             <div className="relative bg-card rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/images/yolanda-osorio.jpg"
+                src="/images/yolanda-osorio.webp"
                 alt="Yolanda Osorio - Terapeuta de Pareja"
                 width={500}
                 height={600}

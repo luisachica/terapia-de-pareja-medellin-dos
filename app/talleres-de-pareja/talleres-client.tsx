@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { MessageSquare, HeartHandshake, Infinity, Flame, Leaf, Sparkles, Calendar, Users } from "lucide-react";
-import WhatsappFloating from "@/components/WhatsappFloating";
+
 import StructuredData from "@/components/StructuredData";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 // Datos Estructurados (JSON-LD) para esta página
 const eventData = {
@@ -56,6 +57,10 @@ export default function TalleresPageClient(): JSX.Element {
             <StructuredData data={faqData} />
             
             <main className="min-h-screen bg-background text-foreground">
+                {/* Breadcrumbs */}
+                <div className="container mx-auto px-4 pt-4">
+                    <BreadcrumbNavigation className="mb-4" />
+                </div>
                 {/* Hero */}
                 <div className="relative w-full bg-secondary">
                     <div className="container mx-auto px-8 py-20 flex flex-col md:flex-row items-center gap-12">
@@ -96,8 +101,8 @@ export default function TalleresPageClient(): JSX.Element {
                         <div className="w-full md:w-[40%]">
                             <div className="rounded-3xl overflow-hidden border border-border shadow-xl aspect-[3/4] bg-muted">
                                 <Image
-                                    src="/images/pareja-feliz-manos.jpg"
-                                    alt="Taller de pareja en Medellín"
+                                    src="/images/taller-pareja-medellin.webp"
+                                    alt="Grupo de parejas participando en taller de relaciones en Medellín"
                                     width={600}
                                     height={800}
                                     className="w-full h-full object-cover"
@@ -170,8 +175,8 @@ export default function TalleresPageClient(): JSX.Element {
 
                         <div className="rounded-3xl overflow-hidden shadow-2xl transform md:translate-x-10 p-4 bg-primary">
                             <Image
-                                src="/images/pareja-feliz-bombas-colores.jpg"
-                                alt="Dinámica en taller de pareja"
+                                src="/images/dinamica-taller-pareja.webp"
+                                alt="Parejas realizando ejercicios dinámicos en taller de fortalecimiento de relaciones"
                                 width={800}
                                 height={533}
                                 className="w-full h-auto rounded-2xl"
@@ -242,7 +247,7 @@ export default function TalleresPageClient(): JSX.Element {
                     </div>
                 </section>
 
-                <WhatsappFloating />
+                
             </main>
         </>
     );

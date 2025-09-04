@@ -8,14 +8,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CheckCircle2, Users, Calendar, BookOpen } from "lucide-react"
 import { cn } from "@/lib/utils"
 import StructuredData from "@/components/StructuredData";
-import WhatsappFloating from "@/components/WhatsappFloating";
+
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 
 // Datos Estructurados para la página "Sobre Mí"
 const personData = {
     "@context": "https://schema.org",
     "@type": "Psychologist",
     "name": "Yolanda Osorio",
-    "image": "https://www.terapiaparejamedellin.com/images/terapia-de-pareja-medellin-yolanda.jpg",
+    "image": "https://www.terapiaparejamedellin.com/images/terapia-de-pareja-medellin-yolanda.webp",
     "jobTitle": "Psicóloga y Terapeuta de Pareja",
     "description": "Psicóloga especializada en Terapia de Pareja, Sexualidad y Trauma. Mi enfoque se basa en herramientas terapéuticas con evidencia para comprender conflictos, sanar heridas y desarrollar habilidades de comunicación efectivas.",
     "address": {
@@ -46,6 +47,10 @@ export default function SobreMiPageClient(): JSX.Element {
             <StructuredData data={personData} />
 
             <main className="min-h-screen bg-background text-foreground">
+                {/* Breadcrumbs */}
+                <div className="container mx-auto px-4 pt-4">
+                    <BreadcrumbNavigation className="mb-4" />
+                </div>
                 {/* Hero Section */}
                 <div className="relative w-full bg-secondary">
                     <div className="container mx-auto px-8 py-20 flex flex-col md:flex-row items-center gap-12">
@@ -60,8 +65,8 @@ export default function SobreMiPageClient(): JSX.Element {
                         <div className="w-full md:w-[40%]">
                             <div className="rounded-3xl overflow-hidden shadow-2xl border border-border aspect-[1/1] bg-muted">
                                 <Image
-                                    src="/images/sobre-mi.jpg"
-                                    alt="Sobre mí - Yolanda Osorio"
+                                    src="/images/sobre-mi.webp"
+                                    alt="Yolanda Osorio, psicóloga especialista en terapia de pareja en Medellín"
                                     width={600}
                                     height={750}
                                     className="w-full h-full object-cover"
@@ -122,8 +127,8 @@ export default function SobreMiPageClient(): JSX.Element {
                             </div>
                             <div className="bg-card rounded-3xl p-8 shadow-lg border border-border">
                                 <Image
-                                    src="/images/pareja-feliz-terapia-yolanda.png"
-                                    alt="Pareja feliz en terapia"
+                                    src="/images/pareja-feliz-terapia-yolanda.webp"
+                                    alt="Pareja sonriente en sesión de terapia exitosa con psicóloga especializada"
                                     width={800}
                                     height={600}
                                     className="w-full h-auto rounded-xl"
@@ -141,8 +146,8 @@ export default function SobreMiPageClient(): JSX.Element {
                             <div className="bg-card rounded-3xl p-8 shadow-lg border border-border text-center">
                                 <div className="w-40 h-40 mx-auto relative mb-6">
                                     <Image
-                                        src="/images/terapia-de-pareja-medellin-yolanda.jpg"
-                                        alt="Yolanda Osorio"
+                                        src="/images/terapia-de-pareja-medellin-yolanda.webp"
+                                        alt="Yolanda Osorio, psicóloga clínica especializada en terapia de pareja"
                                         layout="fill"
                                         className="rounded-full object-cover"
                                     />
@@ -155,7 +160,7 @@ export default function SobreMiPageClient(): JSX.Element {
                                 <div className="mt-8 flex justify-center">
                                     <Image
                                         src="/images/revolucion-en-pareja-logo.png"
-                                        alt="Logo Terapia"
+                                        alt="Logo profesional de terapia de pareja Revolución en Pareja"
                                         width={100}
                                         height={100}
                                         className="w-30 h-auto"
@@ -445,8 +450,7 @@ export default function SobreMiPageClient(): JSX.Element {
                         </div>
                     </div>
                 </section>
-
-                <WhatsappFloating />
+                
             </main >
         </>
     )

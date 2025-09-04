@@ -4,6 +4,7 @@ import "./globals.css"
 import { Header } from "@/components/header"
 import Footer from "../components/Footer"
 import WhatsappFloating from "@/components/WhatsappFloating"
+import { WebVitals } from "@/components/web-vitals"
 import { generateMetadata as generateSiteMetadata } from "@/lib/config"
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" })
@@ -21,7 +22,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Google Search Console Verification Meta Tag */}
         <meta name="google-site-verification" content="68ZW-npy0iSve7KgVoyJVPOE8QPILnfFjjFtagnsP2o" />
       </head>
-      <body className={`${outfit.className} bg-background text-foreground`}>
+      <body className={`${outfit.className} bg-background text-foreground`} suppressHydrationWarning={true}>
+        <WebVitals />
         <Header />
         <main>{children}</main>
         <Footer />

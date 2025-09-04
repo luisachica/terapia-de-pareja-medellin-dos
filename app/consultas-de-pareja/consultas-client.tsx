@@ -4,8 +4,9 @@ import type { JSX } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import WhatsappFloating from "@/components/WhatsappFloating";
+
 import StructuredData from "@/components/StructuredData";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { Users, BookOpen } from "lucide-react";
 
 // Datos Estructurados (JSON-LD) para esta página
@@ -54,6 +55,10 @@ export default function ConsultasPageClient(): JSX.Element {
             <StructuredData data={faqData} />
 
             <main className="min-h-screen bg-background text-foreground">
+                {/* Breadcrumbs */}
+                <div className="container mx-auto px-4 pt-4">
+                    <BreadcrumbNavigation className="mb-4" />
+                </div>
                 {/* Hero */}
                 <div className="relative w-full bg-secondary">
                     <div className="container mx-auto px-8 py-20 flex flex-col md:flex-row items-center gap-12">
@@ -91,8 +96,8 @@ export default function ConsultasPageClient(): JSX.Element {
                         <div className="w-full md:w-[40%]">
                             <div className="rounded-3xl overflow-hidden border border-border shadow-xl aspect-[3/4] bg-muted">
                                 <Image
-                                    src="/images/pareja-feliz-bombas.jpg"
-                                    alt="Terapia de pareja para superar crisis"
+                                    src="/images/pareja-feliz-bombas.webp"
+                                    alt="Pareja feliz celebrando después de superar crisis con terapia de pareja en Medellín"
                                     width={600}
                                     height={800}
                                     className="w-full h-full object-cover"
@@ -151,8 +156,8 @@ export default function ConsultasPageClient(): JSX.Element {
 
                         <div className="rounded-3xl overflow-hidden shadow-2xl transform md:translate-x-10 p-4 bg-primary">
                             <Image
-                                src="/images/pareja-feliz-sonriendo.jpg"
-                                alt="Pareja feliz después de consulta"
+                                src="/images/pareja-feliz-sonriendo.webp"
+                                alt="Pareja sonriendo feliz después de consulta de terapia de pareja exitosa"
                                 width={800}
                                 height={533}
                                 className="w-full h-auto rounded-2xl"
@@ -223,7 +228,7 @@ export default function ConsultasPageClient(): JSX.Element {
                     </div>
                 </section>
 
-                <WhatsappFloating />
+                
             </main>
         </>
     )

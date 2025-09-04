@@ -37,8 +37,8 @@ export default function DificultadesSection() {
             {/* Columna de imagen: 30% en desktop */}
             <div className="w-full lg:w-[40%] relative min-h-[280px]">
               <Image
-                src="/images/problemas-de-pareja.jpg"
-                alt="Problemas de pareja"
+                src="/images/problemas-de-pareja.webp"
+                alt="Pareja en crisis necesitando terapia de pareja en Medellín"
                 fill
                 style={{ objectFit: "cover" }}
                 sizes="(max-width: 1024px) 100vw, 30vw"
@@ -61,8 +61,8 @@ export default function DificultadesSection() {
             </div>
             <div className="w-full lg:w-[40%] relative min-h-[280px]">
               <Image
-                src="/images/depresion-ansiedad.jpg"
-                alt="Depresión y ansiedad"
+                src="/images/depresion-ansiedad.webp"
+                alt="Persona con depresión y ansiedad recibiendo apoyo psicológico"
                 fill
                 style={{ objectFit: "cover" }}
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -85,8 +85,8 @@ export default function DificultadesSection() {
             </div>
             <div className="w-full lg:w-[40%] relative min-h-[280px]">
               <Image
-                src="/images/tratar-traumas-pareja.jpg"
-                alt="Trauma"
+                src="/images/tratar-traumas-pareja.webp"
+                alt="Terapia para superar traumas en pareja con psicóloga especializada"
                 fill
                 style={{ objectFit: "cover" }}
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -109,8 +109,8 @@ export default function DificultadesSection() {
             </div>
             <div className="w-full lg:w-[40%] relative min-h-[280px]">
               <Image
-                src="/images/pareja-feliz-en-su-relacion.jpg"
-                alt="Sexualidad"
+                src="/images/pareja-feliz-en-su-relacion.webp"
+                alt="Pareja feliz trabajando en su intimidad y sexualidad con terapia"
                 fill
                 style={{ objectFit: "cover" }}
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -125,7 +125,7 @@ export default function DificultadesSection() {
           <div className="w-40 h-40 relative">
             <Image
               src="/images/revolucion-en-pareja-logo.png"
-              alt="Revolución en Pareja"
+              alt="Logo Revolución en Pareja - Terapia de pareja Medellín"
               width={160}
               height={160}
               className="w-full h-auto"

@@ -4,8 +4,9 @@ import type { JSX } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import WhatsappFloating from "@/components/WhatsappFloating";
+
 import StructuredData from "@/components/StructuredData";
+import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { Calendar, BookOpen } from "lucide-react";
 
 // Los datos estructurados viven aquí, junto con el contenido visual
@@ -62,6 +63,10 @@ export default function AsesoriasPageClient(): JSX.Element {
             <StructuredData data={faqData} />
             
             <main className="min-h-screen bg-background text-foreground">
+                {/* Breadcrumbs */}
+                <div className="container mx-auto px-4 pt-4">
+                    <BreadcrumbNavigation className="mb-4" />
+                </div>
                 {/* Hero */}
                 <div className="relative w-full bg-secondary">
                     <div className="container mx-auto px-8 py-20 flex flex-col md:flex-row items-center gap-12">
@@ -97,8 +102,8 @@ export default function AsesoriasPageClient(): JSX.Element {
                         <div className="w-full md:w-[40%]">
                             <div className="rounded-3xl overflow-hidden border border-border shadow-xl aspect-[3/4] bg-muted">
                                 <Image
-                                    src="/images/pareja-feliz-en-la-playa.jpg"
-                                    alt="Asesoría de pareja profesional en Medellín"
+                                    src="/images/asesoria-pareja-profesional.webp"
+                                    alt="Psicóloga especializada brindando asesoría profesional de pareja en Medellín"
                                     width={600}
                                     height={800}
                                     className="w-full h-full object-cover"
@@ -157,8 +162,8 @@ export default function AsesoriasPageClient(): JSX.Element {
 
                         <div className="rounded-3xl overflow-hidden shadow-2xl transform md:translate-x-10 p-4 bg-primary">
                             <Image
-                                src="/images/pareja-mujeres-feliz.jpg"
-                                alt="Pareja recibiendo asesoría profesional"
+                                src="/images/pareja-recibiendo-asesoria.webp"
+                                alt="Pareja en sesión de asesoría profesional para mejorar su relación"
                                 width={800}
                                 height={533}
                                 className="w-full h-auto rounded-2xl"
@@ -228,8 +233,6 @@ export default function AsesoriasPageClient(): JSX.Element {
                         </div>
                     </div>
                 </section>
-
-                <WhatsappFloating />
             </main>
         </>
     )
