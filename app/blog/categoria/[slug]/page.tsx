@@ -205,3 +205,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     </div>
   );
 }
+
+// Configuración de Edge Runtime requerida para Cloudflare Pages
+export const runtime = 'edge';

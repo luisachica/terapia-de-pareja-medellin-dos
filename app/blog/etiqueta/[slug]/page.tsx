@@ -244,3 +244,6 @@ export default async function TagPage({ params }: TagPageProps) {
     </div>
   );
 }
+
+// Configuración de Edge Runtime requerida para Cloudflare Pages
+export const runtime = 'edge';
