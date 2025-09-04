@@ -62,7 +62,7 @@ const contactData = {
   ]
 };
 
-export default function ContactoPageClient(): JSX.Element {
+export default function ContactoPageClient() {
     const whatsappLink: string = "https://wa.me/573137415861";
     const whatsappNumber: string = "+57 313 7415861";
     const email: string = "yolioshe0927@gmail.com";

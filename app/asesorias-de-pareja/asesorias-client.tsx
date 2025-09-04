@@ -52,7 +52,7 @@ const faqData = {
   ]
 };
 
-export default function AsesoriasPageClient(): JSX.Element {
+export default function AsesoriasPageClient() {
     const whatsappLink: string = "https://wa.me/573137415861";
 
     return (

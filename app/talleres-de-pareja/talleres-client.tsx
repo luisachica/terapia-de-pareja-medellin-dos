@@ -46,7 +46,7 @@ const faqData = {
   ]
 };
 
-export default function TalleresPageClient(): JSX.Element {
+export default function TalleresPageClient() {
     const whatsappLink: string = "https://wa.me/573137415861";
 
     return (

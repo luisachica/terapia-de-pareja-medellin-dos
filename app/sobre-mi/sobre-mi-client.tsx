@@ -37,7 +37,7 @@ const personData = {
     ]
 };
 
-export default function SobreMiPageClient(): JSX.Element {
+export default function SobreMiPageClient() {
     const whatsappLink: string = "https://wa.me/573137415861";
 
     return (

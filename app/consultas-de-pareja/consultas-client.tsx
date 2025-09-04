@@ -44,7 +44,7 @@ const faqData = {
   ]
 };
 
-export default function ConsultasPageClient(): JSX.Element {
+export default function ConsultasPageClient() {
     const whatsappLink: string = "https://wa.me/573137415861";
 
     return (
