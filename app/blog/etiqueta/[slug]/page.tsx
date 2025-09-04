@@ -42,23 +42,7 @@ export async function generateMetadata({ params }: TagPageProps): Promise<Metada
   };
 }
 
-// Generar rutas estáticas para etiquetas más populares
-export async function generateStaticParams() {
-  try {
-    const tags = await getTags({
-      orderby: 'count',
-      order: 'desc',
-      per_page: 20 // Solo las 20 etiquetas más populares
-    });
-    
-    return tags.map((tag) => ({
-      slug: tag.slug,
-    }));
-  } catch (error) {
-    console.error('Error generating static params for tags:', error);
-    return [];
-  }
-}
+
 
 export default async function TagPage({ params }: TagPageProps) {
   const { slug } = await params;

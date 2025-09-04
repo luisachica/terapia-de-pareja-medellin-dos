@@ -89,23 +89,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   };
 }
 
-// Generar rutas estáticas para los posts más recientes (opcional)
-export async function generateStaticParams() {
-  try {
-    const { posts } = await getPosts({ 
-      per_page: 20, // Generar estáticamente los 20 posts más recientes
-      orderby: 'date',
-      order: 'desc'
-    });
-    
-    return posts.map((post) => ({
-      slug: post.slug,
-    }));
-  } catch (error) {
-    console.error('Error generating static params:', error);
-    return [];
-  }
-}
+
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const resolvedParams = await params;

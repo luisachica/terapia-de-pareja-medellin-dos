@@ -42,19 +42,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   };
 }
 
-// Generar rutas estáticas para categorías
-export async function generateStaticParams() {
-  try {
-    const categories = await getCategories();
-    
-    return categories.map((category) => ({
-      slug: category.slug,
-    }));
-  } catch (error) {
-    console.error('Error generating static params for categories:', error);
-    return [];
-  }
-}
+
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { slug } = await params;
