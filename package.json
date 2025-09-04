@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "clean": "if exist build rmdir /s /q build && if exist dist rmdir /s /q dist && if exist out rmdir /s /q out",
+    "clean": "rm -rf build dist out || true",
     "build:cloudflare": "npm run clean && next build",
     "start": "next start",
     "lint": "next lint",
