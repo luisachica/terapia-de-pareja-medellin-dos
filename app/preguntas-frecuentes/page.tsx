@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: `${siteConfig.url}/images/faq-terapia-pareja.webp`,
+        url: `${siteConfig.url}/images/pareja-feliz-terapia-yolanda.webp`,
         width: 1200,
         height: 630,
         alt: 'Preguntas frecuentes sobre terapia de pareja en Medellín'
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Preguntas Frecuentes - Terapia de Pareja Medellín',
     description: 'Resuelve todas tus dudas sobre terapia de pareja con la psicóloga Yolanda Osorio.',
-    images: [`${siteConfig.url}/images/faq-terapia-pareja.webp`]
+    images: [`${siteConfig.url}/images/pareja-feliz-terapia-yolanda.webp`]
   },
   alternates: {
     canonical: `${siteConfig.url}/preguntas-frecuentes`
