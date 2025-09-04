@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Outfit } from "next/font/google"
+import "../polyfills.js"
 import "./globals.css"
 import { Header } from "@/components/header"
 import Footer from "../components/Footer"
