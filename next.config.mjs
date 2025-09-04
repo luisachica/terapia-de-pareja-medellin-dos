@@ -14,7 +14,7 @@ const nextConfig = {
 
   // Performance optimizations
   experimental: {
-    optimizeCss: true,
+    // optimizeCss: true, // Disabled due to critters module error in Cloudflare
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
 
