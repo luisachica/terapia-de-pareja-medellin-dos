@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-200 mt-8 pt-8 text-center text-slate-600">
-          <p>© {new Date().getFullYear()} Terapia de Pareja Medellín. Todos los derechos reservados.</p>
+          <p>© 2025 Hecho con ❤️ por Snapik. Todos los derechos reservados</p>
           <div className="flex justify-center mt-4">
             <a
               href={whatsappLink}

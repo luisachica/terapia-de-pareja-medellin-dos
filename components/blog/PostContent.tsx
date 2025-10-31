@@ -261,48 +261,48 @@ export default function PostContent({ post }: PostContentProps) {
       </div>
 
       {/* Botones de compartir */}
-      <div className="flex items-center gap-4 mb-8 p-4 bg-secondary rounded-3xl">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-8 p-4 bg-secondary rounded-3xl">
         <span className="text-sm font-medium text-secondary-foreground">Compartir:</span>
         
-        <div className="flex gap-2">
+        <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 sm:gap-3 w-full sm:w-auto">
           <Button
             variant="outline"
             size="sm"
             onClick={() => window.open(shareLinks.facebook, '_blank')}
-            className="gap-2 rounded-full border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10"
+            className="gap-2 rounded-full border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10 flex-shrink-0 justify-center sm:justify-start"
           >
             <Facebook className="h-4 w-4" />
-            Facebook
+            <span className="hidden sm:inline">Facebook</span>
           </Button>
           
           <Button
             variant="outline"
             size="sm"
             onClick={() => window.open(shareLinks.twitter, '_blank')}
-            className="gap-2 rounded-full border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10"
+            className="gap-2 rounded-full border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10 flex-shrink-0 justify-center sm:justify-start"
           >
             <Twitter className="h-4 w-4" />
-            Twitter
+            <span className="hidden sm:inline">Twitter</span>
           </Button>
           
           <Button
             variant="outline"
             size="sm"
             onClick={() => window.open(shareLinks.linkedin, '_blank')}
-            className="gap-2 rounded-full border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10"
+            className="gap-2 rounded-full border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10 flex-shrink-0 justify-center sm:justify-start"
           >
             <Linkedin className="h-4 w-4" />
-            LinkedIn
+            <span className="hidden sm:inline">LinkedIn</span>
           </Button>
           
           <Button
             variant="outline"
             size="sm"
             onClick={handleCopyLink}
-            className="gap-2 rounded-full border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10"
+            className="gap-2 rounded-full border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10 flex-shrink-0 justify-center sm:justify-start"
           >
             {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-            {copied ? 'Copiado' : 'Copiar enlace'}
+            <span className="hidden sm:inline">{copied ? 'Copiado' : 'Copiar enlace'}</span>
           </Button>
         </div>
       </div>
