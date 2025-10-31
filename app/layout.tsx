@@ -10,11 +10,23 @@ import { generateMetadata as generateSiteMetadata } from "@/lib/config"
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" })
 
-export const metadata: Metadata = generateSiteMetadata({
-  title: "Terapia de Pareja Medellín | Yolanda Osorio",
-  description: "Terapia de pareja en Medellín. Te proporcionamos las herramientas y el apoyo necesarios para que tu relación florezca.",
-  path: "/"
-})
+export const metadata: Metadata = {
+  ...generateSiteMetadata({
+    title: "Terapia de Pareja Medellín | Yolanda Osorio",
+    description: "Terapia de pareja en Medellín. Te proporcionamos las herramientas y el apoyo necesarios para que tu relación florezca.",
+    path: "/"
+  }),
+  icons: {
+    icon: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      }
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg'
+  }
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -100,6 +100,16 @@ export default function PostContent({ post }: PostContentProps) {
     const doc = parser.parseFromString(content, 'text/html');
     const links = doc.querySelectorAll('a[href]');
     
+    // Lista de páginas del sitio (no posts del blog)
+    const sitePages = [
+      'consultas-de-pareja',
+      'asesorias-de-pareja',
+      'talleres-de-pareja',
+      'sobre-mi',
+      'contacto',
+      'preguntas-frecuentes'
+    ];
+    
     links.forEach((link) => {
       const href = link.getAttribute('href');
       if (href) {
@@ -109,16 +119,37 @@ export default function PostContent({ post }: PostContentProps) {
           const slugMatch = href.match(/\/([^/]+)\/?$/);
           if (slugMatch && slugMatch[1]) {
             const slug = slugMatch[1];
-            // Transformar a la estructura del sitio headless
-            link.setAttribute('href', `/blog/${slug}`);
+            
+            // Verificar si es una página del sitio o un post del blog
+            if (sitePages.includes(slug)) {
+              // Es una página del sitio, mantener la estructura original
+              link.setAttribute('href', `/${slug}`);
+            } else {
+              // Es un post del blog, agregar /blog/
+              link.setAttribute('href', `/blog/${slug}`);
+            }
           }
         }
-        // También manejar enlaces relativos que apunten a posts
+        // También manejar enlaces relativos
         else if (href.match(/^\/?[^/]+\/?$/) && !href.startsWith('#') && !href.includes('.')) {
-          // Si es un slug simple, convertirlo a /blog/slug
+          // Si es un slug simple, verificar si es página del sitio o post del blog
           const cleanSlug = href.replace(/^\/?/, '').replace(/\/?$/, '');
           if (cleanSlug && cleanSlug !== 'blog') {
-            link.setAttribute('href', `/blog/${cleanSlug}`);
+            if (sitePages.includes(cleanSlug)) {
+              // Es una página del sitio
+              link.setAttribute('href', `/${cleanSlug}`);
+            } else {
+              // Es un post del blog
+              link.setAttribute('href', `/blog/${cleanSlug}`);
+            }
+          }
+        }
+        // Manejar enlaces que ya tienen /blog/ pero apuntan a páginas del sitio
+        else if (href.startsWith('/blog/')) {
+          const slug = href.replace('/blog/', '').replace(/\/?$/, '');
+          if (sitePages.includes(slug)) {
+            // Corregir: es una página del sitio, no un post del blog
+            link.setAttribute('href', `/${slug}`);
           }
         }
       }
@@ -340,22 +371,27 @@ export default function PostContent({ post }: PostContentProps) {
           <div className="bg-secondary rounded-3xl p-6">
             <h3 className="text-lg font-semibold text-secondary-foreground mb-3">Sobre el autor</h3>
             <div className="flex items-start gap-4">
-              {author.avatar_urls && (
-                <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                  <Image
-                    src={author.avatar_urls['96'] || author.avatar_urls['48']}
-                    alt={author.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              )}
+              <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                <Image
+                  src="/images/sobre-mi.webp"
+                  alt={author.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div>
                 <h4 className="font-semibold text-secondary-foreground mb-2">{author.name}</h4>
-                {author.description && (
-                  <p className="text-secondary-foreground/80 text-sm leading-relaxed">
-                    {author.description}
+                {/* Descripción personalizada para Yolanda Osorio */}
+                {author.name === 'Yolanda Osorio' ? (
+                  <p className="text-gray-800 dark:text-gray-200 text-sm leading-relaxed">
+                    Soy psicóloga profesional y terapeuta. Cuento con un Máster en Sexología y Terapia de Pareja, y mi especialidad es ayudar a parejas a sanar heridas del pasado, gestionar conflictos y reconectar desde un lugar más auténtico. Mi enfoque se basa en la evidencia y en métodos como Gottman y TFE, diseñados para ayudarles a que "vuelvan a mirarse con amor".
                   </p>
+                ) : (
+                  author.description && (
+                    <p className="text-gray-800 dark:text-gray-200 text-sm leading-relaxed">
+                      {author.description}
+                    </p>
+                  )
                 )}
               </div>
             </div>
