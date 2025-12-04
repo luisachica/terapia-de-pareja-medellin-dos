@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   }
 }
 
+export const runtime = 'edge'
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className="scroll-smooth">
@@ -45,5 +47,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
-
 
