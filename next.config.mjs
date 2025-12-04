@@ -4,6 +4,9 @@ const nextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   
+  // Enable Turbopack (Next.js 16+) to silence error when webpack config exists
+  turbopack: {},
+  
   // Image optimization
   images: {
     unoptimized: true,

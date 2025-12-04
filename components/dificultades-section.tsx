@@ -52,17 +52,23 @@ export default function DificultadesSection() {
                 <Brain className="w-full h-full stroke-[2.5] text-white" aria-hidden="true" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-4">Depresión y ansiedad</h3>
+                <h3 className="text-xl font-semibold text-slate-800 mb-4">Comunicación en pareja</h3>
                 <p className="text-slate-600 mb-3">
-                  <strong className="text-sky-500">¿Te sientes triste, sin energía o desconectado?</strong>{" "}
-                  La depresión puede manifestarse como una sensación constante de tristeza, pérdida de interés en actividades que antes disfrutabas, cambios en el apetito y dificultad para dormir.
+                  <strong className="text-sky-500">Comunicación que conecta, no que distancia.</strong>{" "}
+                  La comunicación en pareja va más allá de las palabras:
+                  se trata de reconocer lo que sentimos, expresarlo con vulnerabilidad y escuchar con empatía.
+                  Cuando dejamos de defendernos y empezamos a mostrarnos, la conversación se convierte en un puente hacia la conexión emocional y un camino para la autenticidad y evolución en pareja
+
+                  <br />
+                  <br />
+                  <i> Hablar desde el corazón es la forma más profunda de amar.</i>
                 </p>
               </div>
             </div>
             <div className="w-full lg:w-[40%] relative min-h-[280px]">
               <Image
-                src="/images/depresion-ansiedad.webp"
-                alt="Persona con depresión y ansiedad recibiendo apoyo psicológico"
+                src="/images/comunicacion_en_pareja.webp"
+                alt="Persona con comunicacion en pareja recibiendo apoyo psicológico"
                 fill
                 style={{ objectFit: "cover" }}
                 sizes="(max-width: 1024px) 100vw, 40vw"

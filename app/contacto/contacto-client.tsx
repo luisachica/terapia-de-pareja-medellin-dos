@@ -174,6 +174,7 @@ export default function ContactoPageClient() {
                                 <div className="flex items-start gap-3">
                                     <MapPinIcon className="w-5 h-5 text-secondary-foreground flex-shrink-0 mt-1" />
                                     <span className="font-medium">Cra. 73 #45f-23, Laureles - Medellín</span>
+                                    <span className="font-medium">Carrera 81 a# 33aa. 109 Laureles Medellín Antioquia</span>
                                 </div>
                                 <div className="flex items-center gap-3 mt-4 pt-4 border-t border-border">
                                     <Instagram className="w-5 h-5 text-secondary-foreground" />
