@@ -119,6 +119,9 @@ importers:
       cmdk:
         specifier: 1.0.4
         version: 1.0.4(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+      cookie:
+        specifier: ^0.7.0
+        version: 0.7.2
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -2023,10 +2026,6 @@ packages:
     resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==}
     engines: {node: '>= 0.6'}
 
-  cookie@1.1.1:
-    resolution: {integrity: sha512-ei8Aos7ja0weRpFzJnEA9UHJ/7XQmqglbRwnf2ATjcB9Wq874VKH9kfjjirM6UhU2/E5fFYadylyhFldcqSidQ==}
-    engines: {node: '>=18'}
-
   create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
 
@@ -3274,7 +3273,7 @@ snapshots:
       chalk: 5.6.2
       chokidar: 3.6.0
       commander: 11.1.0
-      cookie: 1.1.1
+      cookie: 0.7.2
       esbuild: 0.27.1
       js-yaml: 4.1.1
       miniflare: 3.20250718.2
@@ -4999,8 +4998,6 @@ snapshots:
   convert-hrtime@3.0.0: {}
 
   cookie@0.7.2: {}
-
-  cookie@1.1.1: {}
 
   create-require@1.1.1: {}
 
