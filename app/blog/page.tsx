@@ -36,6 +36,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const runtime = 'edge'
+
 export default async function BlogPage() {
   // Intentar cargar posts iniciales del servidor
   let initialPosts: WordPressPost[] = [];
