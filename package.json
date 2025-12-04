@@ -10,7 +10,7 @@
     "build:cloudflare": "pnpm run clean && next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "pnpm exec next-on-pages --skip-build",
+    "pages:build": "pnpm exec next-on-pages",
     "preview": "pnpm run pages:build && wrangler pages dev",
     "deploy": "pnpm run pages:build && wrangler pages deploy"
   },
