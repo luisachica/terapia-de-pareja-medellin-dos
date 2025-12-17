@@ -180,6 +180,3 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     </div>
   );
 }
-
-// Configuración de Edge Runtime requerida para Cloudflare Pages
-export const runtime = 'edge';
