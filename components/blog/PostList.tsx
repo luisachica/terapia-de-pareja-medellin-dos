@@ -55,11 +55,13 @@ export default function PostList({
     loadCategories();
   }, []);
 
-  // Cargar posts cuando cambian los filtros
+  // Cargar posts cuando cambian los filtros o la página
   useEffect(() => {
-    if (initialPosts.length === 0) {
-      loadPosts();
+    // Evitar la carga inicial si ya tenemos posts del servidor
+    if (initialPosts.length > 0 && currentPage === 1 && !selectedCategory && !search) {
+      return;
     }
+    loadPosts();
   }, [selectedCategory, search, currentPage]);
 
   const loadPosts = async () => {
