@@ -187,8 +187,50 @@ export default function PostContent({ post }: PostContentProps) {
         /<\/table>/gi,
         '</table></div>'
       );
+
+      // Transformar FAQs de Rank Math en un acordeón
+      const docWithFaqs = parser.parseFromString(contentWithTransformedLinks, 'text/html');
+      const faqBlocks = docWithFaqs.querySelectorAll('.rank-math-block'); // Corregido
       
-      return contentWithTransformedLinks;
+      console.log('Buscando bloques de FAQ de Rank Math...');
+      console.log(`Encontrados ${faqBlocks.length} bloques de FAQ.`);
+
+      faqBlocks.forEach((block, index) => {
+        console.log(`Procesando bloque de FAQ #${index + 1}`);
+        const accordionWrapper = docWithFaqs.createElement('div');
+        accordionWrapper.className = 'faq-accordion';
+        
+        const faqItems = block.querySelectorAll('.rank-math-list-item'); // Corregido
+        console.log(`- Encontrados ${faqItems.length} items de FAQ en este bloque.`);
+        
+        faqItems.forEach(item => {
+          const question = item.querySelector('.rank-math-question');
+          const answer = item.querySelector('.rank-math-answer');
+          
+          if (question && answer) {
+            const details = docWithFaqs.createElement('details');
+            details.className = 'faq-details';
+            
+            const summary = docWithFaqs.createElement('summary');
+            summary.className = 'faq-question';
+            summary.innerHTML = question.innerHTML;
+            
+            const answerDiv = docWithFaqs.createElement('div');
+            answerDiv.className = 'faq-answer';
+            answerDiv.innerHTML = answer.innerHTML;
+            
+            details.appendChild(summary);
+            details.appendChild(answerDiv);
+            accordionWrapper.appendChild(details);
+          }
+        });
+        
+        block.replaceWith(accordionWrapper);
+      });
+      
+      const finalHtml = docWithFaqs.body.innerHTML;
+      console.log('HTML final después de la transformación:', finalHtml);
+      return finalHtml;
     }
     
     // En el servidor, devolver el contenido sin procesar
@@ -371,7 +413,7 @@ export default function PostContent({ post }: PostContentProps) {
           <div className="bg-secondary rounded-3xl p-6">
             <h3 className="text-lg font-semibold text-secondary-foreground mb-3">Sobre el autor</h3>
             <div className="flex items-start gap-4">
-              <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+              <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
                 <Image
                   src="/images/sobre-mi.webp"
                   alt={author.name}
@@ -380,15 +422,15 @@ export default function PostContent({ post }: PostContentProps) {
                 />
               </div>
               <div>
-                <h4 className="font-semibold text-secondary-foreground mb-2">{author.name}</h4>
+                <h4 className="text-xl font-semibold text-secondary-foreground mb-2">{author.name}</h4>
                 {/* Descripción personalizada para Yolanda Osorio */}
                 {author.name === 'Yolanda Osorio' ? (
-                  <p className="text-gray-800 dark:text-gray-200 text-sm leading-relaxed">
+                  <p className="text-gray-800 dark:text-gray-200 text-base leading-relaxed">
                     Soy psicóloga profesional y terapeuta. Cuento con un Máster en Sexología y Terapia de Pareja, y mi especialidad es ayudar a parejas a sanar heridas del pasado, gestionar conflictos y reconectar desde un lugar más auténtico. Mi enfoque se basa en la evidencia y en métodos como Gottman y TFE, diseñados para ayudarles a que "vuelvan a mirarse con amor".
                   </p>
                 ) : (
                   author.description && (
-                    <p className="text-gray-800 dark:text-gray-200 text-sm leading-relaxed">
+                    <p className="text-gray-800 dark:text-gray-200 text-base leading-relaxed">
                       {author.description}
                     </p>
                   )
@@ -506,21 +548,31 @@ export default function PostContent({ post }: PostContentProps) {
          
          /* Contenedor de tabla responsive */
          .post-content .table-container {
-           overflow-x: auto;
-           margin: 2rem 0;
-           border-radius: 12px;
-           border: 1px solid hsl(var(--border));
-           background: hsl(var(--card));
-           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-         }
-         
-         .post-content .table-container table {
-           margin: 0;
-           border: none;
-           box-shadow: none;
-           border-radius: 0;
-           background: transparent;
-         }
+          overflow-x: auto;
+          margin: 2rem 0;
+          border-radius: 12px;
+          border: 1px solid hsl(var(--border));
+          background: hsl(var(--card));
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .post-content .wp-block-list {
+          list-style: disc;
+          padding-left: 2rem;
+          margin-bottom: 1.5rem;
+        }
+        
+        .post-content .wp-block-list li {
+          margin-bottom: 0.5rem;
+        }
+        
+        .post-content .table-container table {
+          margin: 0;
+          border: none;
+          box-shadow: none;
+          border-radius: 0;
+          background: transparent;
+        }
          
          /* Responsive para tablas */
          @media (max-width: 768px) {
@@ -646,6 +698,48 @@ export default function PostContent({ post }: PostContentProps) {
             padding: 0.3rem 0.5rem;
             margin: 0.1rem;
           }
+        }
+
+        /* Estilos para el acordeón de FAQs de Rank Math */
+        .faq-accordion {
+          margin: 2rem 0;
+          border: 1px solid hsl(var(--border));
+          border-radius: 12px;
+          overflow: hidden;
+        }
+        .faq-details {
+          border-bottom: 1px solid hsl(var(--border));
+        }
+        .faq-details:last-child {
+          border-bottom: none;
+        }
+        .faq-question {
+          padding: 1.5rem;
+          font-weight: 600;
+          font-size: 1.2rem;
+          cursor: pointer;
+          position: relative;
+          list-style: none; /* Ocultar el marcador por defecto */
+        }
+        .faq-question::-webkit-details-marker {
+          display: none; /* Ocultar el marcador en Chrome/Safari */
+        }
+        .faq-question::after {
+          content: '+';
+          position: absolute;
+          right: 1.5rem;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 1.5rem;
+          transition: transform 0.2s ease;
+        }
+        .faq-details[open] .faq-question::after {
+          transform: translateY(-50%) rotate(45deg);
+        }
+        .faq-answer {
+          padding: 0 1.5rem 1.5rem;
+          color: hsl(var(--muted-foreground));
+          line-height: 1.7;
         }
       `}</style>
       

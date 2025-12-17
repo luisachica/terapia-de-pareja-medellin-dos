@@ -89,6 +89,14 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   };
 }
 
+// Generar rutas estáticas para cada post
+export async function generateStaticParams() {
+  const { posts } = await getPosts({ per_page: 100 }); // Obtener todos los posts
+  return posts.map(post => ({
+    slug: post.slug,
+  }));
+}
+
 
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {

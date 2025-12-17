@@ -1,10 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 
 interface FAQItem {
   question: string
@@ -78,16 +78,7 @@ const faqData: FAQItem[] = [
 const categories = Array.from(new Set(faqData.map(item => item.category)))
 
 export default function FaqClient() {
-  const [openItems, setOpenItems] = useState<number[]>([])
   const [selectedCategory, setSelectedCategory] = useState<string>('Todas')
-
-  const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    )
-  }
 
   const filteredFAQs = selectedCategory === 'Todas' 
     ? faqData 
@@ -153,48 +144,30 @@ export default function FaqClient() {
           </div>
 
           {/* FAQ Items */}
-          <div className="space-y-4">
-            {filteredFAQs.map((item, index) => {
-              const globalIndex = faqData.indexOf(item)
-              const isOpen = openItems.includes(globalIndex)
-              
-              return (
-                <Card key={globalIndex} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <CardHeader 
-                    className="cursor-pointer hover:bg-gray-50 transition-colors duration-200"
-                    onClick={() => toggleItem(globalIndex)}
-                  >
-                    <div className="flex justify-between items-center">
-                      <div className="flex-1">
-                        <div className="text-sm text-blue-600 font-medium mb-1">
-                          {item.category}
-                        </div>
-                        <CardTitle className="text-lg md:text-xl text-gray-900 leading-tight">
-                          {item.question}
-                        </CardTitle>
-                      </div>
-                      <div className="ml-4 flex-shrink-0">
-                        {isOpen ? (
-                          <ChevronUp className="h-5 w-5 text-gray-500" />
-                        ) : (
-                          <ChevronDown className="h-5 w-5 text-gray-500" />
-                        )}
-                      </div>
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {filteredFAQs.map((item, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`} 
+                className="border rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
+              >
+                <AccordionTrigger className="w-full text-left p-6 font-semibold text-lg text-gray-800 hover:no-underline">
+                  <div className="flex-1">
+                    <div className="text-sm text-pink-600 font-medium mb-2">
+                      {item.category}
                     </div>
-                  </CardHeader>
-                  
-                  {isOpen && (
-                    <CardContent className="pt-0">
-                      <Separator className="mb-4" />
-                      <div className="text-gray-700 leading-relaxed">
-                        {item.answer}
-                      </div>
-                    </CardContent>
-                  )}
-                </Card>
-              )
-            })}
-          </div>
+                    {item.question}
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="p-6 pt-0">
+                  <Separator className="mb-4" />
+                  <div className="text-gray-600 leading-relaxed prose">
+                    {item.answer}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
 
           {/* CTA Section */}
           <div className="mt-16 text-center">

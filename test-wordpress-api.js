@@ -15,25 +15,27 @@ async function testWordPressAPI() {
     console.log('📝 Posts encontrados:', response.headers['x-wp-total'] || 'No disponible');
     
     if (response.data && response.data.length > 0) {
+      const post = response.data[0];
       console.log('📄 Primer post:', {
-        id: response.data[0].id,
-        title: response.data[0].title.rendered,
-        slug: response.data[0].slug,
-        date: response.data[0].date
+        id: post.id,
+        title: post.title.rendered,
+        slug: post.slug,
+        date: post.date
       });
-    }
-    
-    // Probar obtener todos los posts
-    console.log('\n2. Probando obtener todos los posts...');
-    const allPostsResponse = await axios.get(`${WORDPRESS_API_URL}/posts?per_page=100`);
-    console.log('📊 Total de posts:', allPostsResponse.headers['x-wp-total'] || 'No disponible');
-    console.log('📄 Posts obtenidos:', allPostsResponse.data.length);
-    
-    if (allPostsResponse.data.length > 0) {
-      console.log('\n📋 Lista de posts:');
-      allPostsResponse.data.forEach((post, index) => {
-        console.log(`   ${index + 1}. ${post.title.rendered} (${post.slug})`);
-      });
+
+      // Buscar listas en el contenido del post
+      console.log('\n3. Buscando listas en el contenido del post...');
+      const content = post.content.rendered;
+      const lists = content.match(/<(ul|ol)[\s\S]*?<\/\1>/gi);
+      if (lists) {
+        console.log('✅ Se encontraron listas:');
+        lists.forEach((list, index) => {
+          console.log(`\n--- Lista ${index + 1} ---\n`);
+          console.log(list);
+        });
+      } else {
+        console.log('❌ No se encontraron listas en el contenido del post.');
+      }
     }
     
   } catch (error) {
