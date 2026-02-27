@@ -18,7 +18,7 @@ const serviceData = {
   },
   "name": "Consultas de Pareja",
   "description": "Un espacio seguro y neutral para parejas en crisis que buscan comprender lo que está sucediendo en su relación, sanar heridas abiertas y recuperar el vínculo que los unió.",
-  "url": "https://terapiadeparejamedellin.com/consultas-de-pareja"
+  "url": "https://terapiadeparejamedellin.com/consultas-de-pareja/"
 };
 
 const faqData = {
@@ -198,7 +198,7 @@ export default function ConsultasPageClient() {
                                     variant="outline"
                                     className="rounded-full border-secondary text-secondary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
                                 >
-                                    <Link href="/asesorias-de-pareja">
+                                    <Link href="/asesorias-de-pareja/">
                                         Conoce más
                                     </Link>
                                 </Button>
@@ -217,7 +217,7 @@ export default function ConsultasPageClient() {
                                     variant="outline"
                                     className="rounded-full border-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground transition-all"
                                 >
-                                    <Link href="/talleres-de-pareja">
+                                    <Link href="/talleres-de-pareja/">
                                         Conoce más
                                     </Link>
                                 </Button>

@@ -52,7 +52,7 @@ export default function ServicesSection() {
               variant="outline"
               className="rounded-full border-secondary text-secondary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
             >
-              <a href="/asesorias-de-pareja">
+              <a href="/asesorias-de-pareja/">
                 Conoce más
               </a>
             </Button>
@@ -71,7 +71,7 @@ export default function ServicesSection() {
               variant="outline"
               className="rounded-full border-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground transition-all"
             >
-              <a href="/talleres-de-pareja">
+              <a href="/talleres-de-pareja/">
                 Conoce más
               </a>
             </Button>
@@ -90,7 +90,7 @@ export default function ServicesSection() {
               variant="outline"
               className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
             >
-              <a href="/consultas-de-pareja">
+              <a href="/consultas-de-pareja/">
                 ¡Conoce más!
               </a>
             </Button>

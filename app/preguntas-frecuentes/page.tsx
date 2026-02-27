@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Preguntas Frecuentes - Terapia de Pareja Medellín',
     description: 'Resuelve todas tus dudas sobre terapia de pareja. Información sobre sesiones, costos, modalidades y proceso terapéutico.',
-    url: `${siteConfig.url}/preguntas-frecuentes`,
+    url: `${siteConfig.url}/preguntas-frecuentes/`,
     siteName: siteConfig.name,
     images: [
       {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     images: [`${siteConfig.url}/images/pareja-feliz-terapia-yolanda.webp`]
   },
   alternates: {
-    canonical: `${siteConfig.url}/preguntas-frecuentes`
+    canonical: `${siteConfig.url}/preguntas-frecuentes/`
   }
 }
 

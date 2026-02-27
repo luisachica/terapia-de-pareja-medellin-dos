@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
       type: 'website',
     },
     alternates: {
-      canonical: `${siteConfig.url}/blog/categoria/${category.slug}`,
+      canonical: `${siteConfig.url}/blog/categoria/${category.slug}/`,
     },
   };
 }

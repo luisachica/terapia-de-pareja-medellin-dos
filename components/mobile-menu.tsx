@@ -39,7 +39,7 @@ export default function MobileMenu() {
           </Link>
 
           <Link
-            href="/sobre-mi"
+            href="/sobre-mi/"
             className="text-foreground hover:text-primary-foreground transition-colors font-medium text-lg py-2 block"
             onClick={() => setOpen(false)}
           >
@@ -47,7 +47,7 @@ export default function MobileMenu() {
           </Link>
 
           <Link
-            href="/blog"
+            href="/blog/"
             className="text-foreground hover:text-primary-foreground transition-colors font-medium text-lg py-2 block"
             onClick={() => setOpen(false)}
           >
@@ -55,7 +55,7 @@ export default function MobileMenu() {
           </Link>
 
           <Link
-            href="/preguntas-frecuentes"
+            href="/preguntas-frecuentes/"
             className="text-foreground hover:text-primary-foreground transition-colors font-medium text-lg py-2 block"
             onClick={() => setOpen(false)}
           >
@@ -79,7 +79,7 @@ export default function MobileMenu() {
             {subOpen && (
               <div className="ml-4 mt-2 flex flex-col gap-4 text-base text-muted-foreground">
                 <Link
-                  href="/consultas-de-pareja"
+                  href="/consultas-de-pareja/"
                   onClick={() => {
                     setOpen(false)
                     setSubOpen(false)
@@ -89,7 +89,7 @@ export default function MobileMenu() {
                   Consultas de pareja
                 </Link>
                 <Link
-                  href="/asesorias-de-pareja"
+                  href="/asesorias-de-pareja/"
                   onClick={() => {
                     setOpen(false)
                     setSubOpen(false)
@@ -99,7 +99,7 @@ export default function MobileMenu() {
                   Asesorías de pareja
                 </Link>
                 <Link
-                  href="/talleres-de-pareja"
+                  href="/talleres-de-pareja/"
                   onClick={() => {
                     setOpen(false)
                     setSubOpen(false)
@@ -113,7 +113,7 @@ export default function MobileMenu() {
           </div>
 
           <Link
-            href="/contacto"
+            href="/contacto/"
             className="text-foreground hover:text-primary-foreground transition-colors font-medium text-lg py-2 block"
             onClick={() => setOpen(false)}
           >

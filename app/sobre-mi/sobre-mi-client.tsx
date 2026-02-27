@@ -314,7 +314,7 @@ export default function SobreMiPageClient() {
                                     variant="outline"
                                     className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
                                 >
-                                    <Link href="/consultas-de-pareja">
+                                    <Link href="/consultas-de-pareja/">
                                         Conoce más
                                     </Link>
                                 </Button>
@@ -333,7 +333,7 @@ export default function SobreMiPageClient() {
                                     variant="outline"
                                     className="rounded-full border-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground transition-all"
                                 >
-                                    <Link href="/asesorias-de-pareja">
+                                    <Link href="/asesorias-de-pareja/">
                                         Conoce más
                                     </Link>
                                 </Button>
@@ -352,7 +352,7 @@ export default function SobreMiPageClient() {
                                     variant="outline"
                                     className="rounded-full border-secondary text-secondary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
                                 >
-                                    <Link href="/talleres-de-pareja">
+                                    <Link href="/talleres-de-pareja/">
                                         Conoce más
                                     </Link>
                                 </Button>

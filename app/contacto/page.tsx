@@ -6,7 +6,7 @@ import { generateMetadata } from "@/lib/config";
 export const metadata: Metadata = generateMetadata({
   title: "Contacto | Agenda tu cita | Terapia de Pareja Medellín",
   description: "Contacta para agendar una cita o resolver tus dudas. Encuentra nuestra dirección, teléfono, WhatsApp y horarios de atención en Medellín.",
-  path: "/contacto"
+  path: "/contacto/"
 });
 
 // Renderiza el componente de cliente que contiene todo el diseño

@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: TagPageProps): Promise<Metada
       type: 'website',
     },
     alternates: {
-      canonical: `${siteConfig.url}/blog/etiqueta/${tag.slug}`,
+      canonical: `${siteConfig.url}/blog/etiqueta/${tag.slug}/`,
     },
   };
 }

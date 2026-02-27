@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Blog - Terapia de Pareja Medellín',
     description: 'Artículos y consejos sobre terapia de pareja, relaciones saludables y bienestar emocional.',
-    url: `${siteConfig.url}/blog`,
+    url: `${siteConfig.url}/blog/`,
     siteName: siteConfig.name,
     images: [
       {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     images: [`${siteConfig.url}/images/blog-og.jpg`],
   },
   alternates: {
-    canonical: `${siteConfig.url}/blog`,
+    canonical: `${siteConfig.url}/blog/`,
   },
 };
 

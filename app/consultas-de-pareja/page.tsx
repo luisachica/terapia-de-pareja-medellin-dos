@@ -6,7 +6,7 @@ import { generateMetadata } from "@/lib/config";
 export const metadata: Metadata = generateMetadata({
   title: "Consultas de pareja en Medellín | Transforma tu relación",
   description: "Ofrecemos un espacio seguro y neutral para parejas que atraviesan crisis. Aprende a sanar heridas, recuperar el diálogo y fortalecer el vínculo.",
-  path: "/consultas-de-pareja"
+  path: "/consultas-de-pareja/"
 });
 
 // Renderiza el componente de cliente que contiene todo el diseño

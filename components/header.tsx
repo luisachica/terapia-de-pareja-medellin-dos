@@ -54,7 +54,7 @@ export function Header() {
                                     <ul className="py-2">
                                         <li>
                                             <Link
-                                                href="/consultas-de-pareja"
+                                                href="/consultas-de-pareja/"
                                                 className="block px-5 py-3 text-sm text-foreground hover:bg-primary hover:text-white transition-colors"
                                             >
                                                 Consultas de pareja
@@ -62,7 +62,7 @@ export function Header() {
                                         </li>
                                         <li>
                                             <Link
-                                                href="/asesorias-de-pareja"
+                                                href="/asesorias-de-pareja/"
                                                 className="block px-5 py-3 text-sm text-foreground hover:bg-primary hover:text-white transition-colors"
                                             >
                                                 Asesorías de pareja
@@ -70,7 +70,7 @@ export function Header() {
                                         </li>
                                         <li>
                                             <Link
-                                                href="/talleres-de-pareja"
+                                                href="/talleres-de-pareja/"
                                                 className="block px-5 py-3 text-sm text-foreground hover:bg-primary hover:text-white transition-colors"
                                             >
                                                 Talleres de pareja
@@ -82,19 +82,19 @@ export function Header() {
                         </div>
 
                         <Link
-                            href="/sobre-mi"
+                            href="/sobre-mi/"
                             className="text-foreground hover:text-primary-foreground transition-colors font-medium"
                         >
                             Sobre mí
                         </Link>
                         <Link
-                            href="/blog"
+                            href="/blog/"
                             className="text-foreground hover:text-primary-foreground transition-colors font-medium"
                         >
                             Blog
                         </Link>
                         <Link
-                            href="/contacto"
+                            href="/contacto/"
                             className="text-foreground hover:text-primary-foreground transition-colors font-medium"
                         >
                             Contacto

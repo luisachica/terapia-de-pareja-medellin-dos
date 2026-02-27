@@ -444,7 +444,7 @@ export default function PostContent({ post }: PostContentProps) {
       {/* Navegación a otros posts */}
       <div className="mt-12 pt-8 border-t border-border">
         <div className="flex flex-col sm:flex-row gap-4 justify-between">
-          <Link href="/blog">
+          <Link href="/blog/">
             <Button variant="outline" className="gap-2 rounded-full border-secondary text-secondary-foreground hover:bg-secondary hover:text-secondary-foreground">
               <ArrowLeft className="h-4 w-4" />
               Ver todos los artículos

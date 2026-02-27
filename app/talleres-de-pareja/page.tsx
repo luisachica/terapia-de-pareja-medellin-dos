@@ -6,7 +6,7 @@ import { generateMetadata } from "@/lib/config";
 export const metadata: Metadata = generateMetadata({
   title: "Talleres de pareja en Medellín | Espacios para crecer juntos",
   description: "Participa en nuestros talleres de pareja vivenciales. Un espacio para mejorar la comunicación, sanar heridas y fortalecer la conexión emocional.",
-  path: "/talleres-de-pareja"
+  path: "/talleres-de-pareja/"
 });
 
 // Renderiza el componente de cliente

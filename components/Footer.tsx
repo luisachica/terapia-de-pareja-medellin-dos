@@ -32,14 +32,14 @@ export default function Footer() {
           <Link href="/" className="text-slate-700 hover:text-pink-500 transition-colors font-medium">
             Home
           </Link>
-          <Link href="/sobre-mi" className="text-slate-700 hover:text-pink-500 transition-colors font-medium">
+          <Link href="/sobre-mi/" className="text-slate-700 hover:text-pink-500 transition-colors font-medium">
             Sobre mí
           </Link>
-          <Link href="/contacto" className="text-slate-700 hover:text-pink-500 transition-colors font-medium">
+          <Link href="/contacto/" className="text-slate-700 hover:text-pink-500 transition-colors font-medium">
             Contacto
           </Link>
           <Link
-            href="/preguntas-frecuentes"
+            href="/preguntas-frecuentes/"
             className="text-slate-700 hover:text-pink-500 transition-colors font-medium"
           >
             FAQ

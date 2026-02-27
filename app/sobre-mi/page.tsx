@@ -6,7 +6,7 @@ import { generateMetadata } from "@/lib/config";
 export const metadata: Metadata = generateMetadata({
   title: "Yolanda Osorio | Psicóloga y terapeuta de pareja en Medellín",
   description: "Yolanda Osorio, psicóloga especializada en terapia de pareja, sexualidad y trauma. Descubre mi enfoque terapéutico para construir una relación más sana.",
-  path: "/sobre-mi"
+  path: "/sobre-mi/"
 });
 
 // Renderiza el componente de cliente que contiene todo el diseño

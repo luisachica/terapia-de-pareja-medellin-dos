@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const metaDescription = post.rankmath?.description || post.acf?.meta_description || excerpt;
   const metaKeywords = post.rankmath?.keywords || post.acf?.meta_keywords || 
     `${categoryNames}, terapia de pareja, ${post.title.rendered}, Medellín`;
-  const canonicalUrl = post.rankmath?.canonical || `${siteConfig.url}/blog/${post.slug}`;
+  const canonicalUrl = post.rankmath?.canonical || `${siteConfig.url}/blog/${post.slug}/`;
   
   // Open Graph data de Rank Math o valores por defecto
   const ogTitle = post.rankmath?.og_title || metaTitle;

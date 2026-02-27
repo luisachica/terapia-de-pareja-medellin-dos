@@ -19,7 +19,11 @@ export const siteConfig = {
 
 // Función para generar URLs canónicas
 export function getCanonicalUrl(path: string = ''): string {
-  const cleanPath = path.startsWith('/') ? path : `/${path}`
+  let cleanPath = path.startsWith('/') ? path : `/${path}`
+  // Asegurar que termine con / si no está vacío
+  if (cleanPath && !cleanPath.endsWith('/')) {
+    cleanPath += '/'
+  }
   return `${siteConfig.url}${cleanPath}`
 }
 

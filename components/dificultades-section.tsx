@@ -24,7 +24,7 @@ export default function DificultadesSection() {
 
 
               <div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-4"><a href="/consultas-de-pareja" className="hover:text-pink-500 transition-colors">Problemas de pareja</a></h3>
+                <h3 className="text-xl font-semibold text-slate-800 mb-4"><a href="/consultas-de-pareja/" className="hover:text-pink-500 transition-colors">Problemas de pareja</a></h3>
                 <p className="text-slate-600 mb-3">
                   <strong className="text-pink-500">¿Sientes que la conexión con tu pareja se ha debilitado?</strong>{" "}
                   Los problemas de comunicación son una de las principales causas de conflictos en las relaciones.
