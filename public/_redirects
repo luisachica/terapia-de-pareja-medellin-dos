@@ -4,6 +4,3 @@ https://www.terapiadeparejamedellin.com/* https://terapiadeparejamedellin.com/:s
 # Redirect old domain if needed (uncomment if migrating from old domain)
 # https://www.terapiaparejamedellin.com/* https://terapiadeparejamedellin.com/:splat 301!
 # https://terapiaparejamedellin.com/* https://terapiadeparejamedellin.com/:splat 301!
-
-# SPA fallback for client-side routing
-/* /index.html 200
