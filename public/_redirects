@@ -5,14 +5,5 @@ https://www.terapiadeparejamedellin.com/* https://terapiadeparejamedellin.com/:s
 # https://www.terapiaparejamedellin.com/* https://terapiadeparejamedellin.com/:splat 301!
 # https://terapiaparejamedellin.com/* https://terapiadeparejamedellin.com/:splat 301!
 
-# Handle trailing slashes
-/consultas-de-pareja /consultas-de-pareja/ 301
-/asesorias-de-pareja /asesorias-de-pareja/ 301
-/talleres-de-pareja /talleres-de-pareja/ 301
-/sobre-mi /sobre-mi/ 301
-/contacto /contacto/ 301
-/blog /blog/ 301
-/preguntas-frecuentes /preguntas-frecuentes/ 301
-
 # SPA fallback for client-side routing
 /* /index.html 200
