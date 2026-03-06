@@ -7,6 +7,7 @@ import StructuredData from "@/components/StructuredData";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { Users, BookOpen } from "lucide-react";
 
+
 // Datos Estructurados (JSON-LD) para esta página
 const serviceData = {
   "@context": "https://schema.org",
